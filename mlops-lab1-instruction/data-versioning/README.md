@@ -14,14 +14,12 @@ This practical lab introduces the **core foundations of MLOps**: data versioning
 **Common use cases:**
 dataset snapshots, restoring previous versions, experiment reproducibility, and tracking evolving metrics.
 
-Learn more: [Versioning Data and Models with DVC](https://dvc.org/doc/use-cases/versioning-data-and-models)v
+Learn more: [Versioning Data and Models with DVC](https://dvc.org/doc/use-cases/versioning-data-and-models)
 
-**Prerequisites:**
-Ensure you have the following installed on your machine:
+**Ressources:**
 
 - [About Git](https://git-scm.com/about)
 - [About DVC](https://dvc.org/doc/starthttps://dvc.org/doc/start)
-
 
 ---
 
@@ -166,15 +164,4 @@ Check that the file `journal.txt` has been restored correctly.
 | Switch data versions | `git checkout <tag>` + `dvc checkout` | Restore a previous dataset version                       |
 | Remote sharing       | `dvc remote add` + `dvc push`         | Share datasets with your team via local or cloud storage |
 
----
 
-## IV – Learning Outcomes
-
-By completing this lab, you will have:
-
-- Learned the basics of **data versioning with DVC**
-- Understood the **integration between Git and DVC**
-- Practiced **reproducibility and collaboration** on shared datasets
-- Established foundational MLOps skills for managing **data pipelines** in real projects
-
--
