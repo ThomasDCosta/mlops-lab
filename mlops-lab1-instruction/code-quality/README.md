@@ -78,6 +78,15 @@ or
 ```bash
 pre-commit run -a
 ```
+```bash
+poetry run pre-commit run --all-files
+```
+
+or
+
+```bash
+poetry run pre-commit run -a
+```
 
 Observe the results and fix issues if any hooks fail.
 
@@ -96,6 +105,11 @@ This ensures checks are executed automatically on every `git commit`.
 pre-commit install
 ```
 
+```bash
+poetry pre-commi install
+```
+
+
 ---
 
 ### Step 5 – Auto-update Pre-commit Hooks
@@ -105,8 +119,13 @@ To update all hooks to their latest versions:
 ```bash
 pre-commit autoupdate
 ```
+or
 
----
+```bash
+poetry run pre-commit autodapte
+```
+
+--`
 
 ### Pro Tip
 
@@ -114,6 +133,10 @@ When adding new hooks or updating existing ones, it’s a good practice to run t
 
 ```bash
 pre-commit run --all-files
+```
+
+```bash
+poetry run pre-commit run --all-files
 ```
 
 > Usually, pre-commit runs only on modified files during `git commit`. Running it manually on all files ensures consistency across the entire repository.
