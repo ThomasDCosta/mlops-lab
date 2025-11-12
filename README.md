@@ -1,7 +1,3 @@
-Here’s a polished, clear, and pedagogical version of your Day 1 MLOps lab instructions in English:
-
----
-
 # MLOps Foundations – Day 1: Local or On-Prem MLOps
 
 ## Lab Overview
