@@ -97,6 +97,11 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
     # - Drop missing values (use df.dropna())
     # - Log final shape
     # - Return the cleaned DataFrame
+    df.columns = df.columns.str.strip()
+    df = df.drop_duplicates()
+    df = df.dropna()
+    logger.info(f"Cleaned dataset shape: {df.shape}")
+    return df
     pass
 
 
@@ -115,7 +120,11 @@ def save_data(df: pd.DataFrame, output_data_filename: str) -> Path:
     # - Define output_path = OUTPUT_DIR / output_data_filename
     # - Save DataFrame to CSV (index=False)
     # - Add logging.info message for confirmation
-    # - Return the output_path
+    # - Return the output_pat
+    output_path = OUTPUT_DIR / output_data_filename
+    df.to_csv(output_path, index=False)
+    logger.info(f"Cleaned dataset saved to: {output_path}")
+    return output_path
     pass
 
 
@@ -165,6 +174,10 @@ def main() -> None:
     # - Call load_data() with args.input_data_path
     # - Call clean_data() on the loaded DataFrame
     # - Call save_data() with cleaned DataFrame and args.output_data_filename
+
+    df_raw = load_data(args.input_data_path)
+    df_cleaned = clean_data(df_raw)
+    output_path = save_data(df_cleaned, args.output_data_filename)
     pass
 
 
